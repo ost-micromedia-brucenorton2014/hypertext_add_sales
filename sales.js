@@ -2,16 +2,16 @@ $( document ).ready(function() {
     //console.log( "sales.js ready!" );
     $.getJSON("sales_query.php", function( jsonData ) {
 			//console.log(jsonData);
-			jsonData.forEach( function(i) { 
-				$("#catalogue").append('<div class="col-sm-4">\
-					<h3>'+i[1]+'</h3>\
-					<img src="images/'+i[3]+'" alt="" class="img-responsive">\
-					<p><strong>$'+i[2]+' </strong> '+i[4]+'</p>\
-					<button type="button" class="btn btn-info btn-lg addToCart" data-itemid="'+i[0]+'"  data-pricepaid="'+i[2]+'"">add to cart</button>\
-				</div>');
-			});
+	jsonData.forEach( function(i) { 
+		$("#catalogue").append('<div class="col-sm-4">\
+			<h3>'+i[1]+'</h3>\
+			<img src="images/'+i[3]+'" alt="" class="img-responsive">\
+			<p><strong>$'+i[2]+' </strong> '+i[4]+'</p>\
+			<button type="button" class="btn btn-info btn-lg addToCart" data-itemid="'+i[0]+'"  data-pricepaid="'+i[2]+'"">add to cart</button>\
+		</div>');
+	});
 
-		});
+});
 
 
   //open the modal with the added hidden form element "itemID"
