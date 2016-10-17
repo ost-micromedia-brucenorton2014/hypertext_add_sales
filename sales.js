@@ -22,7 +22,7 @@ $( document ).ready(function() {
     thisItemID = $(this).data("itemid");
     thisPricePaid = $(this).data("pricepaid");
     $('#modal-hidden').html('<input type="hidden" name="itemID" value="'+thisItemID+'">\
-    													<input type="hidden" name="pricePaid" value="'+thisPricePaid+'">');
+    				<input type="hidden" name="pricePaid" value="'+thisPricePaid+'">');
 		$('#addCustomer').modal();
 
   });
